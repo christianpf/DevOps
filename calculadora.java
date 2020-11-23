@@ -8,16 +8,16 @@ public class calculadora {
 		while(salir ==0) {
 		int seleccion = JOptionPane.showOptionDialog(
 				   null,
-				   "Bienvenido a la calculadora",
-				   "Que operaci贸n desea hacer",
+				   "Bienvenido a la calculadora", 
+				   "Que operaci髇 desea hacer",
 				   JOptionPane.YES_NO_CANCEL_OPTION,
 				   JOptionPane.QUESTION_MESSAGE,
 				   null,    // null para icono por defecto.
-				   new Object[] { "Suma", "Resta", "Multiplicaci贸n", "Divisi贸n" , "M贸dulo" , "Logaritmo base 2" , "Logaritmo base 10", "Logaritmo neperiano", "Salir" },   // null para YES, NO y CANCEL
+				   new Object[] { "Suma", "Resta", "Multiplicaci髇", "Divisi髇" , "M骴ulo" , "Logaritmo base 2" , "Logaritmo base 10", "Logaritmo neperiano", "Salir" },   // null para YES, NO y CANCEL
 				   "Suma");
-
+				
 			switch(seleccion) {
-
+			
 				case 0: float suma = suma();
 					JOptionPane.showMessageDialog(null,"El resultado es "+suma);
 					break;
@@ -26,7 +26,7 @@ public class calculadora {
 					break;
 				case 2:float multiplicacion = multiplicacion();
 				JOptionPane.showMessageDialog(null,"El resultado es "+multiplicacion);
-
+					
 					break;
 				case 3:float division = division();
 				JOptionPane.showMessageDialog(null,"El resultado es "+division);
@@ -34,27 +34,51 @@ public class calculadora {
 					break;
 				case 4:float modulo = modulo();
 				JOptionPane.showMessageDialog(null,"El resultado es "+modulo);
-
+					
 					break;
 				case 5:float log2 = log2();
 				JOptionPane.showMessageDialog(null,"El resultado es "+log2);
-
+					
 					break;
 				case 6:float log10 = log10();
 				JOptionPane.showMessageDialog(null,"El resultado es "+log10);
-
+					
 					break;
 				case 7:float logn = logn();
 				JOptionPane.showMessageDialog(null,"El resultado es "+logn);
-
+					
 					break;
 				default:
 					salir =1;
 					break;
-
+			
 			}
-
+		
 		}
-
+	
 	}
-}
+
+	private static float suma() {
+		float primero = JOptionPane.showOptionDialog(
+				   null,
+				   "Selecione el primer operando", 
+				   "Suma",
+				   JOptionPane.YES_NO_CANCEL_OPTION,
+				   JOptionPane.QUESTION_MESSAGE,
+				   null,    // null para icono por defecto.
+				   new Object[] { 0, 1, 2, 3, 4 , 5 ,6 ,7 ,8 ,9 },   // null para YES, NO y CANCEL
+				   "Suma");
+		float segundo = JOptionPane.showOptionDialog(
+				   null,
+				   "Selecione el segundo operando",
+				   "Suma", 
+				   JOptionPane.YES_NO_CANCEL_OPTION,
+				   JOptionPane.QUESTION_MESSAGE,
+				   null,    // null para icono por defecto.
+				   new Object[] { 0, 1, 2, 3, 4 , 5 ,6 ,7 ,8 ,9 },   // null para YES, NO y CANCEL
+				   "Suma");
+		
+		
+		
+		return (float)primero+segundo;
+	}
