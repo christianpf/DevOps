@@ -9,11 +9,11 @@ public class calculadora {
 		int seleccion = JOptionPane.showOptionDialog(
 				   null,
 				   "Bienvenido a la calculadora", 
-				   "Que operaci髇 desea hacer",
+				   "Que operaci贸n desea hacer",
 				   JOptionPane.YES_NO_CANCEL_OPTION,
 				   JOptionPane.QUESTION_MESSAGE,
 				   null,    // null para icono por defecto.
-				   new Object[] { "Suma", "Resta", "Multiplicaci髇", "Divisi髇" , "M骴ulo" , "Logaritmo base 2" , "Logaritmo base 10", "Logaritmo neperiano", "Salir" },   // null para YES, NO y CANCEL
+				   new Object[] { "Suma", "Resta", "Multiplicaci贸n", "Divisi贸n" , "M贸dulo" , "Logaritmo base 2" , "Logaritmo base 10", "Logaritmo neperiano", "Salir" },   // null para YES, NO y CANCEL
 				   "Suma");
 				
 			switch(seleccion) {
@@ -81,4 +81,29 @@ public class calculadora {
 		
 		
 		return (float)primero+segundo;
+	}
+	
+	private static float resta() {
+		float primero = JOptionPane.showOptionDialog(
+				   null,
+				   "Selecione el primer operando", 
+				   "Resta",
+				   JOptionPane.YES_NO_CANCEL_OPTION,
+				   JOptionPane.QUESTION_MESSAGE,
+				   null,    // null para icono por defecto.
+				   new Object[] { 0, 1, 2, 3, 4 , 5 ,6 ,7 ,8 ,9 },   // null para YES, NO y CANCEL
+				   "Resta");
+		float segundo = JOptionPane.showOptionDialog(
+				   null,
+				   "Selecione el segundo operando",
+				   "Resta", 
+				   JOptionPane.YES_NO_CANCEL_OPTION,
+				   JOptionPane.QUESTION_MESSAGE,
+				   null,    // null para icono por defecto.
+				   new Object[] { 0, 1, 2, 3, 4 , 5 ,6 ,7 ,8 ,9 },   // null para YES, NO y CANCEL
+				   "Resta");
+		
+		
+		
+		return (float)primero-segundo;
 	}
